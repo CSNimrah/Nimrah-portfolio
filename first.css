@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+/*modify this one*/
+html{
+  background-image: url("pic2.jpg");
+  background-repeat:no-repeat;    
+  background-attachment:fixed;
+   background-size: cover; /* makes the image fill the screen without stretching weirdly */
+}
+
+header {
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+}
+/* for the nav bar */
+ul.topnav {
+  display: flex;
+  flex-direction:row;  /*this is by default*/
+  /*justify-content: flex-end;   right aligns the items in the nav bar  , BY DEFAULT ITS LEFT OR u can say flex start*/
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #333333;
+ 
+}
+
+
+ul.topnav li a {  /* elelemnt a in li in class topnav*/
+  display: block;  /* takes its own space*/
+  color: #f1f1f1;
+  padding: 14px 16px;
+  text-decoration: none; /* remove underline */
+  
+}
+
+
+ul.topnav li a:hover {
+  background-color: #dddddd;
+  color: black;
+}
+
+
+/*the body text*/
+
+div.flex-container {
+  display: flex; /* aligns things side to side */
+  /* Show the flex items horizontally */
+  flex-direction: row; /* default is row */
+}
+
+div.flex-container > div {
+  margin: 10px;
+}
+
+/* Use media query and show the flex items vertically if screen width is less than 600px */
+ @media screen and (max-width:600px) {
+  div.flex-container {
+    flex-direction: column;
+  }
+}
+
+
+
+
+/* code for the clock*/
+
+.clock-container {
+  text-align: center;
+  font-family: monospace;
+
+}
+
+.clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.digit-box {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 20px 15px;
+}
+
+.digit-box span {
+  font-size: 80px;
+ 
+  color: violet;
+  text-shadow:0px 0px 15px violet;  /*horzontal  | vertical | blur radius [how much blur u want ]| color*/ 
+}
+
+.colon {
+  font-size: 50px;
+  color: violet;
+  text-shadow: 0 0 10px violet;
+  font-weight: bold;
+}
+
+/* fot the date display */
+#dateDisplay {
+  color: purple;
+  font-size: 20px;
+  margin-top: 15px;
+  letter-spacing: 2px;
+  font-weight: bold;
+} text-shadow:0 0 15px violet;

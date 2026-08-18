@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="first.css">
+</head>
+<body>
+
+
+
+<ul class="topnav">
+  <li><a href="#">About</a></li>
+  <li><a href="#">Experience</a></li>
+  <li><a href="#">Education</a></li>
+  <li><a href="#">Timeline</a></li>
+  <li><a href="#">Contact</a></li>
+  
+</ul>
+
+<header>
+  <h1>Nimrah Fayyaz
+    <br>
+    Computer Science Student
+  </h1>
+</header>
+
+
+<div class="clock-container">
+  <div class="clock">
+    <div class="digit-box"><span id="hours">00</span></div>
+    <span class="colon">:</span>
+    <div class="digit-box"><span id="minutes">00</span></div>
+    <span class="colon">:</span>
+    <div class="digit-box"><span id="seconds">00</span></div>
+  </div>
+  <p id="dateDisplay"></p>
+</div>
+
+<script>
+    //THIS IS FOR TIME
+    function updateClock() {
+  const date= new Date();
+
+  let hours = String(date.getHours()).padStart(2, "0");  // Get the current hours and convert into text [ beacuse pad start works only with string], pad start (no.of digit u want, 0 ---> ,means dding a leading "0" if needed. So 9 → "09", but 14 stays "14".)
+  let minutes = String(date.getMinutes()).padStart(2, "0");
+  let seconds = String(date.getSeconds()).padStart(2, "0");
+
+  document.getElementById("hours").textContent = hours;
+  document.getElementById("minutes").innerText = minutes;
+  document.getElementById("seconds").innerHTML = seconds;
+// THIS IS FOR DATE
+
+  const options = { weekday: "long", year: "numeric", month: "long", day: "numeric" };
+  document.getElementById("dateDisplay").innerHTML = date.toLocaleDateString("en-US", options);
+}
+
+updateClock();
+setInterval(updateClock, 1000);
+</script>
+
+
+<div class="flex-container">
+  <div>
+    <h2>Side</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna.</p>
+  </div>
+
+  <div>
+    <h2>Main Content</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+  </div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
