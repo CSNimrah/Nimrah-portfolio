@@ -1,7 +1,4 @@
-body {
-  margin: 0;
-  padding: 0;
-}
+
 /*modify this one*/
 
 /*
@@ -14,8 +11,7 @@ html{
 
 /* makes the image fill the screen without stretching weirdly */
 
-   
-
+    
 
 header {
   margin: 0;
@@ -56,10 +52,8 @@ div.flex-container {
   display: flex; /* aligns things side to side */
   /* Show the flex items horizontally */
   flex-direction: row; /* default is row */
-}
-
-div.flex-container > div {
   margin: 10px;
+  flex:1;  /* eat all extra white spaces/ basically fill all the white space*/
 }
 
 /* Use media query and show the flex items vertically if screen width is less than 600px */
@@ -77,6 +71,7 @@ div.flex-container > div {
 .clock-container {
   text-align: center;
   font-family: monospace;
+  flex:1;
 
 }
 
@@ -88,10 +83,17 @@ div.flex-container > div {
 }
 
 .digit-box {
-  background: #1a1a1a;
+  /*background: #1a1a1a;
   border: 1px solid #333;
   border-radius: 6px;
-  padding: 20px 15px;
+  padding: 20px 15px;*/
+
+
+   background: rgba(20,20,25,0.8);
+  border: 1px solid rgba(255,140,0,0.3);
+  border-radius: 6px;
+  box-shadow: 0 0 15px rgba(255,140,0,0.1);
+ 
 }
 
 .digit-box span {
@@ -115,10 +117,53 @@ div.flex-container > div {
   margin-top: 15px;
   letter-spacing: 2px;
   font-weight: bold;
-} text-shadow:0 0 15px violet;
+ text-shadow:0 0 15px violet;}
 
 footer {
-  background-color: #f1f1f1;
-  padding: 8px;
+  padding: 20px;
   text-align: center;
+   background-color: #333333;
+   color: #f1f1f1;
+  margin:0px;
+  
 }
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-image: url("1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+ /*background-color: #0a0a0f;
+  background-image: linear-gradient(rgba(255,140,0,0.07) 1px, transparent 1px), 
+  linear-gradient(90deg, rgba(255,140,0,0.07) 1px, transparent 1px); 
+  background-size: 40px 40px; color: #f1f1f1; font-family: monospace; 
+ background-color: #0a0a0f; background-image: radial-gradient(circle at 50% 20%, rgba(255,140,0,0.08), transparent 60%), linear-gradient(rgba(255,140,0,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255,140,0,0.07) 1px, transparent 1px); background-size: cover, 40px 40px, 40px 40px;}*/
+
+
+ h1, .accent { color: #ffb066; text-shadow: 0 0 10px rgba(255,140,0,0.6); }
+
+ 
+
+
+
+
+/* STICKY FOOTER LOGIC:
+   1.write a css code for body
+  display:flex, body = flex direction =column, min-height:100vh (screen-tall column)
+
+
+   
+
+  min-height: 100vh is a separate rule that just makes sure body is at least screen-tall
+   so there's room to push the footer down 
+(min-height:100vh only matters if content is shorter than the screen) 
+
+   2. .flex-container gets flex:1 → grows, eats leftover space [ the flex:1 is applied any one tag, usually the one which is the biggest ]
+   3. footer gets pushed to bottom as a result*/
+
+   
