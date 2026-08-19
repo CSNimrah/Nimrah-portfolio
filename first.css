@@ -116,3 +116,9 @@ div.flex-container > div {
   letter-spacing: 2px;
   font-weight: bold;
 } text-shadow:0 0 15px violet;
+
+footer {
+  background-color: #f1f1f1;
+  padding: 8px;
+  text-align: center;
+}
