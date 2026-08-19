@@ -3,12 +3,19 @@ body {
   padding: 0;
 }
 /*modify this one*/
+
+/*
 html{
   background-image: url("pic2.jpg");
   background-repeat:no-repeat;    
-  background-attachment:fixed;
-   background-size: cover; /* makes the image fill the screen without stretching weirdly */
-}
+  background-attachment:scroll;
+   background-size: cover;
+  }*/
+
+/* makes the image fill the screen without stretching weirdly */
+
+   
+
 
 header {
   margin: 0;
